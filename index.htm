@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Final Project</title>
+
+	<link rel="stylesheet" media="screen" href="style.css">
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.csszengarden.com/zengarden.xml">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Dave Shea">
+	<meta name="description" content="A demonstration of what can be accomplished visually through CSS-based design.">
+	<meta name="robots" content="all">
+
+
+	<!--[if lt IE 9]>
+	<script src="script/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<!--
+
+	- use classes for styling. Don't use ids.
+	- web fonts are cool, just make sure you have a license to share the files. Hosted
+	  services that are applied via the CSS file (ie. Google Fonts) will work fine, but
+	  most that require custom HTML won't. TypeKit is supported, see the readme on this
+	  page for usage instructions: https://github.com/mezzoblue/csszengarden.com/
+
+	And a few tips on building your CSS file:
+
+	- use :first-child, :last-child and :nth-child to get at non-classed elements
+	- use ::before and ::after to create pseudo-elements for extra styling
+	- use multiple background images to apply as many as you need to any element
+	- use the Kellum Method for image replacement, if still needed. http://goo.gl/GXxdI
+	- don't rely on the extra divs at the bottom. Use ::before and ::after instead.
+
+		
+-->
+
+<body id="css-zen-garden">
+<div class="page-wrapper">
+
+	<section class="intro" id="zen-intro">
+		<header role="banner">
+			<h1>The Mobility of African Students to US Institutions</h1>
+			<!-- <h2>The Beauty of <abbr title="Cascading Style Sheets">CSS</abbr> Design</h2> -->
+		</header>
+
+		<div class="summary" id="zen-summary" role="article">
+			<p>A demonstration of what can be accomplished through <abbr title="Cascading Style Sheets">CSS</abbr>-based design. Select any style sheet from the list to load it into this page.</p>
+			<p>Download the example <a href="/examples/index" title="This page's source HTML code, not to be modified.">html file</a> and <a href="/examples/style.css" title="This page's sample CSS, the file you may modify.">css file</a></p>
+		</div>
+
+		<div class="preamble" id="zen-preamble" role="article">
+			<h3>Introduction</h3>
+			<p>In the early weeks of January 2023, I was in a debate with my sister. She claimed that one of the many reasons why Africa was still a third-world continent was because the continent was constantly being brain-drained. That students who would otherwise have helped the country move forward are going to institutions outside the country and not coming back. Of course I, being a Nigerian student in a US institution, am naturally one of the culprits. </p>
+			<p>Luckily for me, the EducationUSA (a program by the US with offices around the world that assist students get into US colleges and universities) had just posted the 2023 Open Doors Report. Part of the report included the top 10 countries sending students to the US. I was very happy to show this to my sister, because the only African country on the list was Nigeria as number 10, with a total of 14000 students studying in the US. </p>
+			<p>Let's put this in context. Nigeria is a country of over 225 million people, meaning less than 0.0062 percent of Nigeria’s citizens are studying in Nigeria.</p>
+            <p>This good-natured though heated debate with my sister formed the basis for this project.</p>
+        </div>
+	</section>
+
+	<div class="main supporting" id="zen-supporting" role="main">
+		<div class="explanation" id="zen-explanation" role="article">
+			<h3>Project Topic and Data</h3>
+			<p>I am analyzing the flow of international students from certain African countries to US colleges and universities. Initially, my intent was to choose 5 countries from West Africa, but that proved to be a very little dataset. Now, my project is tailored towards the top 5 most populous countries in each African region, giving a total of 25 countries.</p>
+			<p>My project has 3 main goals: 1. To analyze the trend of international student enrollment from the source countries. 2. To analyze the impact of COVID-19 on international student mobility and identify any changes or disruptions in the enrollment of international students. And 3. To determine what student visas, institution types and levels of education are more popular among the selected countries.</p>
+            <p>I collected most of the institution-related data from the <a href="https://opendoorsdata.org/fact_sheets/student-mobility/"> Open Doors website</a>,while the visa data in Excel format was from <a href="https://travel.state.gov/content/dam/visas/Statistics/Non-Immigrant-Statistics/NIVDetailTables/FYs97-21_NIVDetailTable.xlsx">travel.state.gov</a>. Most of the preprocessing simply involved downloading the data for each country and then combining them manually into 1 table.</p>
+        </div>
+
+		<div class="participation" id="zen-participation" role="article">
+			<h3>Visualizations</h3>
+			<p>Naturally, I started off my visualizations with a map of Africa showing the number of international students in the US from the chosen countries, from the 2014/15 - 2021/22 academic years. I used a color gradient with light signifying low values and dark representing higher values.</p>
+            <div class='tableauPlaceholder' id='viz1683078103850' style='position: relative'>
+                <noscript>
+                    <a href='#'>
+                        <img alt='Int. Totals - 2022 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project_16830775715720&#47;Int_Totals&#47;1_rss.png' style='border: none' />
+                    </a>
+                </noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='Project_16830775715720&#47;Int_Totals' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project_16830775715720&#47;Int_Totals&#47;1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1683078103850');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width='100%';
+                vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+            <p>This map however didn’t show me much. With the exception of Nigeria, which has much higher numbers than the other countries, it was difficult to see differences in the map through the years. The colors barely changed from one year to the other, and I often had to make sure I wasn’t just looking at the same map.</p>
+            <p>As for covid’s effect on the flow of students, there was a decrease in the number but this was barely significant.</p>
+		</div>
+
+		<div class="benefits" id="zen-benefits" role="article">
+			<h3>Viz Two</h3>
+			<p>Next diagram I created was the visas dataset. I initially intended this visualization as a tooltip in the map above. But I found that the years didn’t match: the international students dataset used academic years, while the visa dataset used fiscal years.</p>
+            <p>I visualized this data using a side-by-side bar chart of student visas (F1, J1, and M1) issued by the US to students from the chosen countries from 2014-2021. This chart can be filtered by year, country, and visa type. In order to prevent having the move from one year to the other, I placed all years together but of course that can be filtered.</p>
+            <div class='tableauPlaceholder' id='viz1683216474063' style='position: relative'>
+                <noscript>
+                  <a href='#'>
+                    <img alt='Visas ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project_16830775715720&#47;Visas&#47;1_rss.png' style='border: none' />
+                  </a>
+                </noscript>
+                <object class='tableauViz' style='display:none;'>
+                  <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                  <param name='embed_code_version' value='3' />
+                  <param name='site_root' value='' />
+                  <param name='name' value='Project_16830775715720&#47;Visas' />
+                  <param name='tabs' value='no' />
+                  <param name='toolbar' value='yes' />
+                  <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project_16830775715720&#47;Visas&#47;1.png' />
+                  <param name='animate_transition' value='yes' />
+                  <param name='display_static_image' value='yes' />
+                  <param name='display_spinner' value='yes' />
+                  <param name='display_overlay' value='yes' />
+                  <param name='display_count' value='yes' />
+                  <param name='language' value='en-US' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1683216474063');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width='100%';
+                vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>          
+            <p>As has been foreshadowed by the previous diagram, Nigeria had much higher values overall with the others having values in hundreds and a few in low thousands. However South Africa has much higher values for J1 visas especially in 2019.</p>
+        </div>
+
+		<div class="requirements" id="zen-requirements" role="article">
+			<h3>Viz Three</h3>
+			<p>The next diagram shows the distribution of students by academic level for the last 2 academic years. I chose a bubble plot for this. Size indicates the number of students in a country/academic level combination, while the colors represent the different academic levels.</p>
+			<div class='tableauPlaceholder' id='viz1683217023400' style='position: relative'>
+                <noscript>
+                  <a href='#'>
+                    <img alt='Acad. level - 2020/21' src='https://public.tableau.com/static/images/Pr/Project_16830775715720/Acad_level/1_rss.png' style='border: none' />
+                  </a>
+                </noscript>
+                <object class='tableauViz' style='display:none;'>
+                  <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                  <param name='embed_code_version' value='3' />
+                  <param name='site_root' value='' />
+                  <param name='name' value='Project_16830775715720&#47;Acad_level' />
+                  <param name='tabs' value='no' />
+                  <param name='toolbar' value='yes' />
+                  <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project_16830775715720&#47;Acad_level&#47;1.png' />
+                  <param name='animate_transition' value='yes' />
+                  <param name='display_static_image' value='yes' />
+                  <param name='display_spinner' value='yes' />
+                  <param name='display_overlay' value='yes' />
+                  <param name='display_count' value='yes' />
+                  <param name='language' value='en-US' />
+                </object>
+                <script type='text/javascript'>
+                    var divElement = document.getElementById('viz1683217023400');
+                    var vizElement = divElement.getElementsByTagName('object')[0];
+                    vizElement.style.width='75%';
+                    vizElement.style.height=(divElement.offsetWidth*0.50)+'px';
+                    var scriptElement = document.createElement('script');
+                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                </script>  
+            </div>         
+            <p>From the plot, it can be seen that the Graduate level generally has more students than the others.</p>
+        </div>
+
+        <div class="benefits" id="zen-benefits" role="article">
+			<h3>Viz Four</h3>
+			<p>Finally is the stacked bar chart showing the proportion of students by institution type in the last academic year.</p>
+            <div class='tableauPlaceholder' id='viz1683222185064' style='position: relative; width: 900px; '>
+                <noscript>
+                  <a href='#'>
+                    <img alt='Intitute type ' src='https://public.tableau.com/static/images/Pr/Project_16830775715720/Intitutetype/1_rss.png' style='border: none' />
+                  </a>
+                </noscript>
+                <object class='tableauViz' style='display:none;'>
+                  <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                  <param name='embed_code_version' value='3' />
+                  <param name='site_root' value='' />
+                  <param name='name' value='Project_16830775715720&#47;Intitutetype' />
+                  <param name='tabs' value='no' />
+                  <param name='toolbar' value='yes' />
+                  <param name='static_image' value='https://public.tableau.com/static/images/Pr/Project_16830775715720/Intitutetype/1.png' />
+                  <param name='animate_transition' value='yes' />
+                  <param name='display_static_image' value='yes' />
+                  <param name='display_spinner' value='yes' />
+                  <param name='display_overlay' value='yes' />
+                  <param name='display_count' value='yes' />
+                  <param name='language' value='en-US' />
+                </object>
+                <script type='text/javascript'>
+                  var divElement = document.getElementById('viz1683222185064');
+                  var vizElement = divElement.getElementsByTagName('object')[0];
+                  vizElement.style.width='100%';
+                  vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                  var scriptElement = document.createElement('script');
+                  scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                  vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                </script>
+            </div>  
+            <p>This diagram is heavily skewed. It is obvious that a huge proportion of students from all countries indicated attend doctoral universities. This is in  line with the academic level plot where graduate students were the bulk.</p>
+        </div>
+
+        <div class="requirements" id="zen-requirements" role="article">
+            <h3>Viz Five</h3>
+            <p>As a side (and possibly because of personal bias), I created a tree diagram showing the number of students from Nigeria in different fields of study from 2014-2022.</p>
+            <div class='tableauPlaceholder' id='viz1683342638873' style='position: relative'>
+                <noscript>
+                    <a href='#'>
+                        <img alt='Study - 2014/15 ' src='https://public.tableau.com/static/images/Pr/Project_16830775715720/Study/1_rss.png' style='border: none' />
+                    </a>
+                </noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='Project_16830775715720&#47;Study' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project_16830775715720&#47;Study&#47;1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1683342638873');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width='100%';
+                vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>         
+        </div>
+
+        <div class="benefits" id="zen-benefits" role="article">
+			<h3>Dashboard</h3>
+			<p>To wrap up, I created a dashboard containing the tables that were used in the creation of the above diagrams, and more. This dashboard is interactive and can be filtered by country.</p>
+            <div class='tableauPlaceholder' id='viz1683336161412' style='position: relative'>
+                <noscript>
+                  <a href='#'>
+                    <img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project_16830775715720&#47;Dashboard1&#47;1_rss.png' style='border: none' />
+                  </a>
+                </noscript>
+                <object class='tableauViz'  style='display:none;'>
+                  <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                  <param name='embed_code_version' value='3' /> 
+                  <param name='site_root' value='' />
+                  <param name='name' value='Project_16830775715720&#47;Dashboard1' />
+                  <param name='tabs' value='no' />
+                  <param name='toolbar' value='yes' />
+                  <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project_16830775715720&#47;Dashboard1&#47;1.png' />
+                  <param name='animate_transition' value='yes' />
+                  <param name='display_static_image' value='yes' />
+                  <param name='display_spinner' value='yes' />
+                  <param name='display_overlay' value='yes' />
+                  <param name='display_count' value='yes' />
+                  <param name='language' value='en-US' />
+                  <param name='filter' value='publish=yes' />
+                </object>
+                <script type='text/javascript'>
+                  var divElement = document.getElementById('viz1683336161412');
+                  var vizElement = divElement.getElementsByTagName('object')[0];
+                  if ( divElement.offsetWidth > 800 ) { 
+                    vizElement.style.width='1200px';
+                    vizElement.style.height='1277px';
+                  } 
+                  else if ( divElement.offsetWidth > 500 ) { 
+                    vizElement.style.width='1200px';
+                    vizElement.style.height='1277px';
+                  } 
+                  else { 
+                    vizElement.style.width='100%';
+                    vizElement.style.height='2977px';
+                  }                     
+                  var scriptElement = document.createElement('script');
+                  scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                  vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                </script>
+            </div>
+        </div>
+		<footer>
+			<a href="http://validator.w3.org/check/referer" title="Check the validity of this site&#8217;s HTML" class="zen-validate-html">HTML</a>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer" title="Check the validity of this site&#8217;s CSS" class="zen-validate-css">CSS</a>
+			<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" title="View the Creative Commons license of this site: Attribution-NonCommercial-ShareAlike." class="zen-license">CC</a>
+			<a href="http://mezzoblue.com/zengarden/faq/#aaa" title="Read about the accessibility of this site" class="zen-accessibility">A11y</a>
+			<a href="https://github.com/mezzoblue/csszengarden.com" title="Fork this site on Github" class="zen-github">GH</a>
+		</footer>
+
+	</div>
+
+
+	<!-- <aside class="sidebar" role="complementary">
+		<div class="wrapper">
+
+			<div class="design-selection" id="design-selection">
+				<h3 class="select">Select a Design:</h3>
+				<nav role="navigation">
+					<ul>
+					<li>
+						<a href="/221/" class="design-name">Mid Century Modern</a> by						<a href="http://andrewlohman.com/" class="designer-name">Andrew Lohman</a>
+					</li>					<li>
+						<a href="/220/" class="design-name">Garments</a> by						<a href="http://danielmall.com/" class="designer-name">Dan Mall</a>
+					</li>					<li>
+						<a href="/219/" class="design-name">Steel</a> by						<a href="http://steffen-knoeller.de" class="designer-name">Steffen Knoeller</a>
+					</li>					<li>
+						<a href="/218/" class="design-name">Apothecary</a> by						<a href="http://trentwalton.com" class="designer-name">Trent Walton</a>
+					</li>					<li>
+						<a href="/217/" class="design-name">Screen Filler</a> by						<a href="http://elliotjaystocks.com/" class="designer-name">Elliot Jay Stocks</a>
+					</li>					<li>
+						<a href="/216/" class="design-name">Fountain Kiss</a> by						<a href="http://jeremycarlson.com" class="designer-name">Jeremy Carlson</a>
+					</li>					<li>
+						<a href="/215/" class="design-name">A Robot Named Jimmy</a> by						<a href="http://meltmedia.com/" class="designer-name">meltmedia</a>
+					</li>					<li>
+						<a href="/214/" class="design-name">Verde Moderna</a> by						<a href="http://www.mezzoblue.com/" class="designer-name">Dave Shea</a>
+					</li>					</ul>
+				</nav>
+			</div>
+
+			<div class="design-archives" id="design-archives">
+				<h3 class="archives">Archives:</h3>
+				<nav role="navigation">
+					<ul>
+						<li class="next">
+							<a href="/214/page1">
+								Next Designs <span class="indicator">&rsaquo;</span>
+							</a>
+						</li>
+						<li class="viewall">
+							<a href="/pages/alldesigns/" title="View every submission to the Zen Garden.">
+								View All Designs							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+			<div class="zen-resources" id="zen-resources">
+				<h3 class="resources">Resources:</h3>
+				<ul>
+					<li class="view-css">
+						<a href="/214/214.css" title="View the source CSS file of the currently-viewed design.">
+							View This Design&#8217;s <abbr title="Cascading Style Sheets">CSS</abbr>						</a>
+					</li>
+					<li class="css-resources">
+						<a href="/pages/resources/" title="Links to great sites with information on using CSS.">
+							<abbr title="Cascading Style Sheets">CSS</abbr> Resources						</a>
+					</li>
+					<li class="zen-faq">
+						<a href="/pages/faq/" title="A list of Frequently Asked Questions about the Zen Garden.">
+							<abbr title="Frequently Asked Questions">FAQ</abbr>						</a>
+					</li>
+					<li class="zen-submit">
+						<a href="/pages/submit/" title="Send in your own CSS file.">
+							Submit a Design						</a>
+					</li>
+					<li class="zen-translations">
+						<a href="/pages/translations/" title="View translated versions of this page.">
+							Translations						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</aside> -->
+
+
+</div>
+
+<!--
+
+	These superfluous divs/spans were originally provided as catch-alls to add extra imagery.
+	These days we have full ::before and ::after support, favour using those instead.
+	These only remain for historical design compatibility. They might go away one day.
+		
+-->
+<div class="extra1" role="presentation"></div><div class="extra2" role="presentation"></div><div class="extra3" role="presentation"></div>
+<div class="extra4" role="presentation"></div><div class="extra5" role="presentation"></div><div class="extra6" role="presentation"></div>
+
+</body>
+</html>
