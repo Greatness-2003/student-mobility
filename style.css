@@ -1,0 +1,262 @@
+/*-------------------------------------------    
+    Base     
+-------------------------------------------*/
+* { margin: 2em; padding: 0; }
+html { font-size: 62.5%; } /* for rems */
+body { font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: #333; background: #e8ecf0 url(i/denim2.png) no-repeat 50% 350px; }
+
+/* block level */
+h1 { font: bold 4.2rem Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin: 0 0 0.5em; }
+h2 { font: bold 1.8rem Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin: 0 0 1em; color: #182e4f; }
+h3 { font: bold 1.5rem Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin: 0 0 1em; }
+h4, h5, h6 { font: bold 1.2rem Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin: 0 0 1em; }
+/* 
+.wf-active body,
+.wf-active h1,
+.wf-active h2,
+.wf-active h3,
+.wf-active h4,
+.wf-active h5,
+.wf-active h6 { font-family: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif"; } */
+
+p, ul, dl, ol, table { font-size: 16px; margin: 0 0 1em; }
+/* .wf-active p { font-weight: 300; } */
+
+form { margin: 0 0 1.5em; }
+
+/* inline */
+
+label { font-size: 1.6rem; }
+input, select, textarea {  }
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { }
+input.empty::-webkit-input-placeholder, textarea.empty::-webkit-input-placeholder { color: red; }
+input.empty:-moz-placeholder, textarea.empty:-moz-placeholder { color: red; }
+.error { color: red; }
+
+table { }
+    td { padding: 0.25em 1em; border-top: 1px solid #aaa; }
+
+em { font-style: italic; }
+strong { font-weight: bold; }
+
+mark { background: none; font-style: normal; }
+
+video { width: 100%; height: auto; }
+
+a { 
+	text-decoration: none; color: #a28351; position: relative; margin: 0.5em; 
+	    transition: all 0.25s linear;
+   -moz-transition: all 0.25s linear;
+-webkit-transition: all 0.25s linear;
+	 -o-transition: all 0.25s linear;
+}
+
+a:after { 
+	content: ""; display: block; background: #a28351; height: 2px; width: 100%; position: absolute; bottom: -0.2em; left: 0; opacity: 0; 
+	    transition: all 0.25s linear;
+   -moz-transition: all 0.25s linear;
+-webkit-transition: all 0.25s linear;
+	 -o-transition: all 0.25s linear;
+}
+
+a:hover, a:focus { color: #000; }
+a:hover:after, a:focus:after { opacity: 1; bottom: 0; }
+
+img { display: block; margin: 0 10px 10px 0; max-width: 100%; }
+
+a img { border: none; }
+
+i { font-style: normal; }
+b { font-weight: normal; }
+
+abbr, abbr[title], acronym { font-size: 75%; letter-spacing: 0.2em; text-transform: uppercase; border: none; }
+
+code { font: 1.4rem/1 Consolas, 'Courier New', Courier, monospace; color: #999; }
+
+sub, sup { line-height: 0; }
+
+::selection { background: #d5d9dc; color: #333; }
+::-moz-selection { background: #d5d9dc; color: #333; }
+
+
+/*-------------------------------------------    
+    Global
+-------------------------------------------*/
+ 
+/* Phark Image Replacement - http://phark.typepad.com/phark/2003/08/accessible_imag.html */
+.phark { display: block; text-indent: -9999px; background-position: 0 0; background-repeat: no-repeat; background-color: transparent; }
+
+/* Trimming Outline in Firefox - http://snook.ca/archives/html_and_css/trimming_long_o  */
+/*\*/ .phark-link { overflow: hidden; } /**/
+
+/* Easy Clearing - http://www.positioniseverything.net/easyclearing.html */ 
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+.offscreen { position: absolute; left: -9999px; display: block; }
+.onscreen { left: 0; }
+
+.hide { display: none; }
+
+.no-bullets { list-style: none; }
+
+.bulleted { list-style: disc; }
+
+.uppercase { text-transform: uppercase; }
+
+.rwd-break { display: block; }
+
+.kellum { display: block; text-indent: 100%; white-space: nowrap; overflow: hidden; }
+
+/*-------------------------------------------    
+	Modules
+-------------------------------------------*/
+.page-wrapper { width: 90%; margin: 0 auto; }
+
+.main h3, .preamble h3, .select { visibility: hidden; font-size: 2rem; text-transform: uppercase; letter-spacing: 0.1em; color: #263358; }
+/* .wf-active .main h3, .wf-active .preamble h3 { font-weight: 900; } */
+/*
+.main h3:after, .preamble h3:after, .select:after { visibility: visible; display: block; }
+*/
+.main p, .preamble p { font-size: 2rem; }
+/* .wf-active .main p, .wf-active .preamble p { line-height: 1.4; } */
+
+.next a,
+.previous a,
+.viewall a,
+.zen-resources a,
+.summary p:nth-child(2) a
+{	
+        transition-property: none;
+   -moz-transition-property: none;
+-webkit-transition-property: none;
+     -o-transition-property: none;
+}
+
+.next a:after,
+.previous a:after,
+.viewall a:after,
+.zen-resources a:after,
+.summary p:nth-child(2) a:after 
+{ opacity: 0; }
+
+
+
+/*-------------------------------------------    
+	Banner
+-------------------------------------------*/
+[role="banner"] h1 { padding: 1em 0 0; text-transform: uppercase; letter-spacing: 0.1em; font-size: 3.5rem; font-weight: 900; color: #182e4f; visibility: visible; }
+[role="banner"] h1:after { content: "By Greatness Emmanuel-king"; visibility: visible; display: block; color: #aaa; letter-spacing: 0.5em; font-size: 1.4rem; font-weight: normal; margin: 0.5em 0 3em; color: rgba(24, 46, 79, 0.4); } */
+
+[role="banner"] h2 { visibility: visible; display: none; text-transform: uppercase; font-weight: 400; color: rgba(41, 78, 134, 0.5); } */
+
+/*-------------------------------------------    
+    Preamble
+-------------------------------------------*/
+.summary p { text-transform: uppercase; letter-spacing: 0.1em; font-size: 1.8rem; line-height: 1.6; }
+
+
+
+/*-------------------------------------------    
+	Design Selection
+-------------------------------------------*/
+.design-selection { margin: 3em 0 0; }
+	.design-selection ul { list-style: none; width: 94%; margin: 0 auto; }
+	.design-selection ul:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+		.design-selection li { float: left; width: 50%; font-size: 1.2rem; margin: 0 0 1em; color: #aaa; }
+		.design-selection li:nth-child(odd) { width: 47%; padding-right: 3%; clear: left; }
+
+			.design-name { display: block; font-size: 1.4rem; font-weight: bold; margin: 0 0 0.24em; text-transform: uppercase; letter-spacing: 0.1em; position: relative; }
+			.design-name:after { background: none; opacity: 0; }
+			.design-name:hover { font-style: italic; }
+			
+			.designer-name { color: #7989a3; }
+			.designer-name:after, footer a:after { height: 1px; }
+
+
+.select:after { content: "Washes & Styles"; font-size: 1.8rem; text-align: center; width: 7em; margin: 0 auto 2em; background: transparent url(i/waves.png) no-repeat 50% 0; padding: 2em 0 0; color: #182e4f; visibility: visible; }
+
+.archives, .resources { position: absolute; left: -9999px;  }
+
+.design-archives ul { list-style: none; margin: 1em 0 0; width: 100%; text-align: center; }
+	.design-archives li { display: inline-block; position: relative; }
+	.design-archives a { display: block; text-indent: 100%; white-space: nowrap; overflow: hidden; }
+
+.next { margin-right: 3em; }
+	.next a { background: transparent url(s/czg.svg) no-repeat 10px -56px; width: 43px; height: 37px; }
+	.next a:hover, .next a:focus { background-position: 10px -138px; }
+
+.previous { margin-right: 3em; }
+	.previous a { background: transparent url(s/czg.svg) no-repeat 10px -220px; width: 43px; height: 37px; }
+	.previous a:hover, .previous a:focus { background-position: 10px -302px; }
+
+.viewall { margin-left: 1em; }
+	.viewall a { background: transparent url(s/czg.svg) no-repeat -56px -55px; width: 39px; height: 39px; }
+	.viewall a:hover, .viewall a:focus { background-position: -56px -137px; }
+
+footer { font-size: 1.3rem; }
+	footer a { margin-left: 1em; }
+	footer a:first-child { margin-left: 0; }
+
+.zen-resources ul { list-style: none; margin: 2em 0 4em; text-align: center; }
+.zen-resources ul:before { content: ""; height: 4px; width: 80px; background: #d5d9dc; display: block; text-align: center; margin: 0 auto 2em; }
+	.zen-resources li { margin: 0 0 1em 3em; display: inline-block; }
+	.zen-resources li:first-child { margin-left: 0; }
+		.zen-resources a { display: inline-block; text-indent: 100%; white-space: nowrap; overflow: hidden; background: transparent url(s/czg.svg) no-repeat 0 0; width: 60px; height: 60px; }
+		
+		.view-css a { background-position: -502px 12px; }
+		.view-css a:hover, .view-css a:focus { background-position: -502px -78px; }
+
+		.css-resources a { background-position: -150px -194px; }
+		.css-resources a:hover, .css-resources a:focus { background-position: -150px -286px; }
+
+		.zen-faq a { background-position: -265px -192px; }
+		.zen-faq a:hover, .zen-faq a:focus { background-position: -265px -284px; }
+
+		.zen-submit a { background-position: -502px -194px; }
+		.zen-submit a:hover, .zen-submit a:focus { background-position: -502px -286px; }
+
+		.zen-translations a { background-position: -380px -193px; }
+		.zen-translations a:hover, .zen-translations a:focus { background-position: -380px -285px; }
+
+
+
+
+
+
+/*-------------------------------------------    
+	Animations
+-------------------------------------------*/
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.intro { 
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 1s; 
+	-webkit-animation-timing-function: ease-in-out; 
+	-webkit-animation-iteration-count: 1;
+}
+
+
+[role="article"] {
+	-webkit-opacity: 0;
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 1s; 
+	-webkit-animation-timing-function: ease-in-out; 
+	-webkit-animation-delay: 0.5s;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-iteration-count: 1;
+}
+
+
+.design-selection, .design-archives {
+	-webkit-opacity: 0;
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 1s; 
+	-webkit-animation-timing-function: ease-in-out; 
+	-webkit-animation-delay: 1s;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-iteration-count: 1;
+}
+
